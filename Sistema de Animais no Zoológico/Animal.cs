@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Animais_no_Zoológico
 {
-    abstract class Animal
+    public abstract class Animal
     {
         private string? Name { get; set; }
         private int Age { get; set; }
@@ -22,10 +22,17 @@ namespace Sistema_de_Animais_no_Zoológico
             return this.Age;
         }
 
-        public virtual void Sound() 
+        public Animal(string name, int age) 
         {
-            return;
+            this.Name = name;
+            this.Age = age;
         }
-        
+
+        public override string ToString()
+        {
+            return $"nome: {this.Name}\nIdade: {this.Age}";
+        }
+
+        public abstract string Sound();               
     }
 }

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Animais_no_Zoológico
 {
-    internal class Leon : Animal
+    public class Leon : Animal
     {
-        public override void Sound()
+        public Leon(string name, int age) : base(name, age) 
+        { 
+        }
+
+        public override string Sound()
         {
-            Console.WriteLine("Leao: Rugido");
+            return "Som: Rugido";
         }
 
     }
